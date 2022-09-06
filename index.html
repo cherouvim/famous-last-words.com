@@ -37,6 +37,10 @@
         color: white;
       }
     </style>
+    <script>
+      window.module = {}; // dirty
+    </script>
+    <script src="/dist/famous-last-words.js?1"></script>
   </head>
   <body>
     <h1>Loading...</h1>
@@ -48,10 +52,6 @@
         >GitHub</a
       >
     </footer>
-    <script>
-      window.module = {}; // dirty
-    </script>
-    <script src="/dist/famous-last-words.js?1"></script>
     <script>
       const famousLastWordsQuotes = window.module.exports;
       const h1 = window.document.querySelector("h1");

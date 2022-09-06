@@ -1,0 +1,18 @@
+{
+  "name": "famous-last-words.com",
+  "version": "1.0.0",
+  "description": "Renders quotes from the [famous-last-words](https://www.npmjs.com/package/famous-last-words) npm package.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherouvim/famous-last-words.com.git"
+  },
+  "author": "Ioannis Cherouvim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cherouvim/famous-last-words.com/issues"
+  },
+  "homepage": "https://github.com/cherouvim/famous-last-words.com#readme",
+  "dependencies": {
+    "famous-last-words": "^0.3.0"
+  }
+}

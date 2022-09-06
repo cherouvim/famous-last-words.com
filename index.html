@@ -1,1 +1,43 @@
-coming soon...
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Famous Last Words</title>
+    <link rel="icon" href="/favicon.png?1" />
+    <link rel="manifest" href="/manifest.json?1" />
+    <style>
+      body {
+        background: #000;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(253, 253, 126);
+        padding-top: 30vh;
+        font-size: 6vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: rgba(128, 128, 255, 0.3) 0px 54px 55px,
+          rgba(128, 128, 255, 1) 0px -12px 30px,
+          rgba(128, 128, 0, 0.2) 0px 4px 6px,
+          rgba(128, 255, 255, 0.3) 0px 12px 13px,
+          rgba(128, 128, 0, 0.1) 0px -3px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Loading...</h1>
+    <script>
+      window.module = {}; // dirty
+    </script>
+    <script src="/node_modules/famous-last-words/dist/index.js?1"></script>
+    <script>
+      const famousLastWordsPhrases = window.module.exports;
+      const randomFamousLastWordsPhrase =
+        famousLastWordsPhrases[
+          Math.floor(Math.random() * famousLastWordsPhrases.length)
+        ];
+      window.document.querySelector("h1").innerHTML =
+        randomFamousLastWordsPhrase;
+    </script>
+  </body>
+</html>

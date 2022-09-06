@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "[json]": {
+      "editor.formatOnSave": true
+    },
+    "files.exclude": {
+      "node_modules": true,
+      "build": true
+    },
+    "files.watcherExclude": {
+      "node_modules": true,
+      "build": true
+    },
+    "search.exclude": {
+      "node_modules": true,
+      "build": true
+    },
+    "editor.formatOnSave": true
+  }
+}

@@ -36,12 +36,16 @@
     <script src="/dist/famous-last-words.js?1"></script>
     <script>
       const famousLastWordsPhrases = window.module.exports;
-      const randomFamousLastWordsPhrase =
-        famousLastWordsPhrases[
-          Math.floor(Math.random() * famousLastWordsPhrases.length)
-        ];
-      window.document.querySelector("h1").innerHTML =
-        randomFamousLastWordsPhrase;
+      const h1 = window.document.querySelector("h1");
+      window.renderRandomLastWordsPhrase = function () {
+        const randomFamousLastWordsPhrase =
+          famousLastWordsPhrases[
+            Math.floor(Math.random() * famousLastWordsPhrases.length)
+          ];
+        h1.innerHTML = randomFamousLastWordsPhrase;
+      };
+      window.renderRandomLastWordsPhrase();
+      window.document.onclick = renderRandomLastWordsPhrase;
     </script>
   </body>
 </html>

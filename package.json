@@ -2,6 +2,9 @@
   "name": "famous-last-words.com",
   "version": "1.0.0",
   "description": "Renders quotes from the [famous-last-words](https://www.npmjs.com/package/famous-last-words) npm package.",
+  "scripts": {
+    "build": "cp node_modules/famous-last-words/dist/index.js dist/famous-last-words.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cherouvim/famous-last-words.com.git"

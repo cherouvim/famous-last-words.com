@@ -1,3 +1,1 @@
-node_modules/famous-last-words/src/
-node_modules/famous-last-words/*
-!node_modules/famous-last-words/dist/
+node_modules

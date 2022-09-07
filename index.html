@@ -41,6 +41,9 @@
       window.module = {}; // dirty // pio vromiko apo kantina stin palaia ethniki odo athinon lamias
     </script>
     <script src="/dist/famous-last-words.js?1"></script>
+    <script>
+      window.famousLastWordsQuotes = window.module.exports;
+    </script>
   </head>
   <body>
     <h1>Loading...</h1>
@@ -53,17 +56,25 @@
       >
     </footer>
     <script>
-      const famousLastWordsQuotes = window.module.exports;
+      const randomizedFamousLastWordsQuotes = famousLastWordsQuotes.sort(
+        function () {
+          return Math.random() - 0.5;
+        }
+      );
       const h1 = window.document.querySelector("h1");
-      window.renderRandomLastWordsQuote = function () {
-        const randomFamousLastWordsQuote =
-          famousLastWordsQuotes[
-            Math.floor(Math.random() * famousLastWordsQuotes.length)
-          ];
-        h1.innerHTML = randomFamousLastWordsQuote;
+      let currentRandomLastWordsQuoteIndex = 0;
+      window.renderNextRandomLastWordsQuote = function () {
+        h1.innerHTML = famousLastWordsQuotes[currentRandomLastWordsQuoteIndex];
+        currentRandomLastWordsQuoteIndex++;
+        if (
+          currentRandomLastWordsQuoteIndex >=
+          randomizedFamousLastWordsQuotes.length
+        ) {
+          currentRandomLastWordsQuoteIndex = 0;
+        }
       };
-      window.renderRandomLastWordsQuote();
-      window.document.onclick = renderRandomLastWordsQuote;
+      window.document.onclick = renderNextRandomLastWordsQuote;
+      window.renderNextRandomLastWordsQuote();
     </script>
   </body>
 </html>

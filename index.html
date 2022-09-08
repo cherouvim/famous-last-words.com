@@ -62,15 +62,15 @@
         }
       );
       const h1 = window.document.querySelector("h1");
-      let currentRandomLastWordsQuoteIndex = 0;
+      let nextRandomLastWordsQuoteIndex = 0;
       window.renderNextRandomLastWordsQuote = function () {
-        h1.innerHTML = famousLastWordsQuotes[currentRandomLastWordsQuoteIndex];
-        currentRandomLastWordsQuoteIndex++;
+        h1.innerHTML = famousLastWordsQuotes[nextRandomLastWordsQuoteIndex];
+        nextRandomLastWordsQuoteIndex++;
         if (
-          currentRandomLastWordsQuoteIndex >=
+          nextRandomLastWordsQuoteIndex >=
           randomizedFamousLastWordsQuotes.length
         ) {
-          currentRandomLastWordsQuoteIndex = 0;
+          nextRandomLastWordsQuoteIndex = 0;
         }
       };
       window.document.onclick = renderNextRandomLastWordsQuote;

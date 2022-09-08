@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/cherouvim/famous-last-words.com#readme",
   "dependencies": {
-    "famous-last-words": "0.4.1"
+    "famous-last-words": "0.5.0"
   }
 }

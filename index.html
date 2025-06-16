@@ -70,20 +70,15 @@
       >
     </footer>
     <script>
-      const randomizedFamousLastWordsQuotes = famousLastWordsQuotes.sort(
-        function () {
-          return Math.random() - 0.5;
-        }
-      );
+      famousLastWordsQuotes.sort(function () {
+        return Math.random() - 0.5;
+      });
       const h1 = window.document.querySelector("h1");
       let nextRandomLastWordsQuoteIndex = 0;
       window.renderNextRandomLastWordsQuote = function () {
-        h1.innerHTML = famousLastWordsQuotes[nextRandomLastWordsQuoteIndex];
+        h1.textContent = famousLastWordsQuotes[nextRandomLastWordsQuoteIndex];
         nextRandomLastWordsQuoteIndex++;
-        if (
-          nextRandomLastWordsQuoteIndex >=
-          randomizedFamousLastWordsQuotes.length
-        ) {
+        if (nextRandomLastWordsQuoteIndex >= famousLastWordsQuotes.length) {
           nextRandomLastWordsQuoteIndex = 0;
         }
       };
